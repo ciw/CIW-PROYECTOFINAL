@@ -14,7 +14,7 @@ body{
     font-style: normal;
 }
 h1, h2, h3, h4, p{font-family: 'exo', helvetica, arial;
-	font-style: italic;;}
+	font-style: italic;}
 h1{}
 h2{ font-size: 18px;
 	font-weight: 400;}
@@ -37,9 +37,16 @@ h3{ font-size: 65px;
 header{
 	width: 100%;
 	background-color: rgba(255, 255, 255, .3);
+	margin-top:20px;
 }
 header h1, header h2, header h3{ color: white;
-	text-shadow:1px 1px 4px #5d9191;} 
+	text-shadow:1px 1px 4px 	#5d9191;} 
+
+#logo, #menu{display: inline-block; 
+	vertical-align: top;
+	}
+#logo{}	
+#menu{}
 /*----------------------------------------*/
 
 /*--------------------HOME------------------*/
