@@ -149,9 +149,9 @@ aside{ width: 238px; overflow: hidden;}
 }
 #gallery section.wrapp{ padding: 20px 0;}
 
-#gallery a{ display: inline-block; width: 32%; height: 300px; overflow: hidden; position: relative;
+#gallery a{ display: inline-block; width: 32%; min-width: 310px;
 border:2px solid white;box-shadow: 1px 1px 4px #86a8a8;}
-#gallery a img{width: 140%; height: auto; position: absolute; top: 0; left: -40px; 
+#gallery a img{ height: 250px; 
 }
 /*------------------------------------------*/
 
@@ -197,4 +197,42 @@ footer aside #mapa{
 /*------------------------------------------*/
 
 
+/*-------------RESPONSIVE-------------------*/
+@media screen and (max-width: 768px){
+	.wrapp{
+		padding: 0 20px;
+		width: auto;
+
+	}
+	#logo, #menu{
+		width: 100%;
+	}
+	#logo h1, #logo h2, #social, nav, h3{
+		text-align: center;
+	}
+	#slider img{
+		width: 100%;
+	}
+	aside{
+		display: none;
+	}
+	#about p{-webkit-column-count:2;}
+
+	footer form, footer aside{
+		width: 100%;
+	}
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media screen and (max-width: 480px){
+	#social{
+		display: none;
+	}
+	nav{
+		height: auto;
+
+	}
+	nav li{
+		margin: 0 auto;
+	}
+}
 
