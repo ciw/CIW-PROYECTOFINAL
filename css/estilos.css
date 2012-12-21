@@ -22,6 +22,9 @@ h2{ font-size: 16px;
 h3{ font-size: 65px;
 	font-weight: 400;
 	text-transform: uppercase;}	
+p, ol.lista li{ font-size: 12px; 
+	font-weight: normal;
+	color: #5d9191;}	
 
 
 .wrapp{
@@ -37,9 +40,10 @@ h3{ font-size: 65px;
 /*--------------------HEADER------------------*/
 header{
 	width: 100%;
-	background-color: rgba(255, 255, 255, .3);
+	background-color: rgba(255, 255, 255, .1);
 	margin-top:20px;
-
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2) 40px, transparent 40px, transparent);
+	background-image: -moz-linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2) 40px, transparent 40px, transparent);
 }
 header h1, header h2, header h3{ color: white;
 	text-shadow:1px 1px 4px 	#5d9191;} 
@@ -50,8 +54,8 @@ header h2{ text-align: center;
 #logo, #menu{display: inline-block; 
 	vertical-align: top;
 	}
-#logo{}	
-#menu{}
+#logo{ width: 312px; padding: 10px 0;}	
+#menu{ width: 652px;}
 #social{ width: 100%;
 	height: 44px;
 	text-align: right;
@@ -61,9 +65,9 @@ header h2{ text-align: center;
 	width: 32px; height: 32px;
 	background-color: white;
 	border-radius: 8px;
-	opacity: .5;
+	opacity: .2;
 	margin-left: 8px;
-	-webkit-transition: background-position .5s, opacity 2s;}
+	-webkit-transition: background-position .5s, opacity 1s ease .2s;}
 
 #inlink:hover, #tweetr:hover, #face:hover{ background-position: top center;
 	opacity: 1;}
@@ -79,18 +83,19 @@ header h2{ text-align: center;
 	width: 126px;
 	box-shadow: 1px 1px 4px #86a8a8;
 	border:none;
-	margin-top: 4px;
+	margin-top: 3px;
 	outline: none;
-	padding: 0 4px;
+	padding: 1px 5px;
 	color: #86a8a8;
 }
 
 #social input::-webkit-input-placeholder{color:#86a8a8;}
 #social input::-moz-input-placeholder{color:#86a8a8;} 
 
-nav{ letter-spacing: 30px;}
-nav li{ display:inline-block;}
-nav li a{ display: block;
+ul{ list-style: none; padding: 0; margin: 0;}
+nav{ letter-spacing: 20px; text-align: right; height: 40px;}
+nav > li{ display:inline-block; vertical-align: top;}
+nav li > a{ display: block;
 	letter-spacing:1px;
 	text-transform: uppercase;
 	font-family: helvetica;
@@ -104,29 +109,92 @@ nav li a{ display: block;
 	text-align: center;
 	box-shadow: 1px 1px 4px #86a8a8;
 	border-radius: 4px;
-	-webkit-transition:all .5s;}
+	-webkit-transition:all .5s;
+	position: relative;}
 
-nav li a:hover{ color:white; background-color:#86a8a8;}
+nav li:hover > a{ color:white; background-color:#86a8a8;}
+
+nav li a ul{ position: absolute; left: 0; top: 0; width: 300px; }
+
+nav li a ul li{ display: block; }
+
+nav li ul li a{ border-radius:0; font-size: 11px; display: none; -webkit-transition: opacity 5s ease 1s; }
+
+nav li:hover ul li a{ display: block; }
+
 /*----------------------------------------*/
 
 /*--------------------HOME------------------*/
-#home{
+#home{ padding: 20px 0;}
 
-}
+#slider, aside{display: inline-block;vertical-align: top;}
+#slider img{ border:5px solid white;box-shadow: 1px 1px 4px #86a8a8;}
+.gif{ border:5px solid white;box-shadow: 1px 1px 4px #86a8a8;}
+aside{ width: 238px; overflow: hidden;}
 /*------------------------------------------*/
 
 /*--------------------ABOUT------------------*/
 #about{
 	background-color: #fff;
+	overflow: hidden;
 }
+#about h3, #about h4{color: #5d9191;}
+#about p{-webkit-column-count:3;}
 /*------------------------------------------*/
 
 /*--------------------GALLERY------------------*/
 #gallery{
-	background-color: #90b5c5;
+	background: url(../img/patterns/bg_gallery.png) #90b5c5;
+	font-size: 0;
+}
+#gallery section.wrapp{ padding: 20px 0;}
+
+#gallery a{ display: inline-block; width: 32%; height: 300px; overflow: hidden; position: relative;
+border:2px solid white;box-shadow: 1px 1px 4px #86a8a8;}
+#gallery a img{width: 140%; height: auto; position: absolute; top: 0; left: -40px; 
 }
 /*------------------------------------------*/
 
 /*--------------------FOOTER------------------*/
 
+footer{	background: url(../img/patterns/bg_footer.png) #90b5c5;
+border-top:10px solid white;
+padding: 18px 0;
+position: relative;}
+
+footer:after{content:"";
+width:100%; position:absolute; top: 5px;
+border-top: 2px solid white;}
+
+footer form{
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+footer form label{
+	display: block;	
+}
+
+footer aside{
+	width: 70%;
+	display: inline-block;
+	vertical-align: top;
+}
+footer aside #info{
+	width: 50%;
+	vertical-align: top;
+	display: inline-block;
+}
+
+footer aside #mapa{
+	width: 50%;
+	height: 300px;
+	vertical-align: top;
+	display: inline-block;
+	background: white;
+}
 /*------------------------------------------*/
+
+
+
